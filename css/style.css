@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+    padding: 0;
+    cursor: url("../images/aim.png"), text;
+    overflow: hidden;
+    
+}
+body::before{
+    content:'';
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url("../images/bg.png") repeat-x bottom left;
+}
+@keyframes duckfly {
+    0%{
+        left: 150%;
+        top: 10%;
+    }    
+    25%{
+        left: 80%;
+        top: 50%;
+    } 
+    50%{
+        left: 50%;
+        top: 30%;
+    } 
+    75%{
+        left: 40%;
+        top: 30%;
+    } 
+    100%{
+        left: -50%;
+        top: 10%;
+    }
+}
+
+ input + label{
+     position: absolute;
+     left: -100px;
+     z-index: 1;
+     height: 36px;
+     width: 36px;
+    display: block;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    background: url("../images/duck_black.png") no-repeat left center;
+    background-position: -138px 0;
+ }
+ input:checked + label{
+     opacity: 0;
+     transition: 0.5s;
+     transform: rotate(120deg);
+     transform-origin: 60%;
+     z-index: -5;
+ }
+ .duck:nth-last-of-type(1){
+     animation: duckfly 20s linear 1s infinite;
+     cursor: url("../images/aim.png"), text;
+ }
+ .duck:nth-last-of-type(2){
+    animation: duckfly 10s linear 2s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(3){
+    animation: duckfly 10s linear 3s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(4){
+    animation: duckfly 15s linear 3s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(5){
+    animation: duckfly 20s linear 3s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(6){
+    animation: duckfly 35s linear 4s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(7){
+    animation: duckfly 30s linear 4s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(8){
+    animation: duckfly 20s linear 4s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(9){
+    animation: duckfly 20s linear 5s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(10){
+    animation: duckfly 10s linear 5s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(11){
+    animation: duckfly 20s linear 6s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+.duck:nth-last-of-type(12){
+    animation: duckfly 10s linear 6s infinite;
+    cursor: url("../images/aim.png"), text;
+}
+ .score{
+     position: absolute;
+     bottom: 0;
+     height: 50px;
+     line-height: 50px;
+     background-color: #dadada;
+     text-align: center;
+     width: 100%;
+     z-index: 2;
+     font-size: 30px;
+     cursor: default;
+ }
+ .score::after{
+     content: counter(score);
+     display: inline-block;
+ }
+ .score::before{
+     content: "Score :";
+     display: inline-block;
+     margin-right: 10px;
+ }
+ input:checked{
+     counter-increment: score;
+ }
+ 
+ .btn:hover{
+     background-color: rgb(231, 74, 74);
+     color: white;
+ }
+ #game_over{
+     width: 550px;
+     height: 300px;
+     z-index: 10;
+     position: absolute;
+     left: 500px;
+     top: 160px;
+     background-color: black;
+     color: white;
+     text-align: center;
+     font-size: 50px;
+     padding-top: 110px;
+     box-sizing: border-box;
+     cursor: default;
+     display: none;
+     transition: 0.5s;
+ }
+ .btn{
+    width: 150px;
+    height: 50px;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    background-color: #4cafa2;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 12px;
+    transition: 0.2s all ease;
+    cursor: pointer;
+
+}
+ .btn2{
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition: 0.5s all ease;
+    cursor: pointer;
+
+ }
+ .btn2:hover{
+     background-color: red;
+ }
+
+ 
